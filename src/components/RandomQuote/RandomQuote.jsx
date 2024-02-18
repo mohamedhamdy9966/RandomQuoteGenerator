@@ -20,20 +20,20 @@ const random = () => {
     setQuote(select);
 }
 const twitter = () => {
-    window.open(`http://twitter.com/intent/tweet?text=${quote.text} - ${quote.author.split(',')[0]}`)
+    window.open(`http://twitter.com/intent/tweet?text=${quote?.text} - ${quote?.author.split(',')[0]}`)
 }
 loadQuotes();
 
   return (
     <div className='container'>
-        <div className="quote">{quote.text||quote}
+        <div className="quote">{quote?.text||quote}
         </div>
         <div>
             <div className="line">
             </div>
             <div className="bottom">
                 <div className="author">
-                  - {quote.author.split(',')[0]}
+                  - {quote?.author.split(',')[0]}
                 </div>
                 <div className="icons">
                     <img src={reload} onClick={()=>{random()}} alt="regenerate"/>
